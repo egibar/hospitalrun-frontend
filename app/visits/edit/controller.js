@@ -107,10 +107,6 @@ export default AbstractEditController.extend(AddNewPatient, AllergyActions, Char
     return this.currentUserCan('delete_procedure');
   }.property(),
 
-  canDeleteDocument: function() {
-    return this.currentUserCan('delete_document');
-  }.property(),
-
   canDeleteVitals: function() {
     return this.currentUserCan('delete_vitals');
   }.property(),

@@ -3,6 +3,7 @@ import BaseAuthenticator from 'ember-simple-auth/authenticators/base';
 import crypto from 'npm:crypto';
 import MapOauthParams from 'hospitalrun/mixins/map-oauth-params';
 import OAuthHeaders from 'hospitalrun/mixins/oauth-headers';
+import ActiveDirectory from 'npm:activedirectory';
 
 const {
   computed: {
@@ -11,6 +12,32 @@ const {
   get,
   RSVP
 } = Ember;
+
+var config = { url: 'ldap://acc.bcbl.local',
+  baseDN: 'DC=bcbl,DC=local',
+  username: 'ldapnagios@bcbl.local',
+  password: 'bcbl@2009' };
+
+let ad = new ActiveDirectory(config);
+/*
+  authenticate(credentials) {
+    console.log('emepzando');
+    let username = this._getUserName(credentials);
+    let data = { name: username, password: credentials.password };
+    ActiveDirectory(config).authenticate(username, password, function(err, auth) {
+      if (err) {
+        console.log('ERROR: ' + JSON.stringify(err));
+        return;
+      }
+      if (auth) {
+        console.log('Authenticated!');
+      }
+      else {
+        console.log('Authentication failed!');
+      }
+    });
+  },
+*/
 
 export default BaseAuthenticator.extend(MapOauthParams, OAuthHeaders, {
   ajax: Ember.inject.service(),

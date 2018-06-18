@@ -3,7 +3,7 @@ import BaseAuthenticator from 'ember-simple-auth/authenticators/base';
 import crypto from 'npm:crypto';
 import MapOauthParams from 'hospitalrun/mixins/map-oauth-params';
 import OAuthHeaders from 'hospitalrun/mixins/oauth-headers';
-import ActiveDirectory from 'npm:activedirectory';
+//import ActiveDirectory from 'npm:activedirectory';
 
 const {
   computed: {
@@ -12,7 +12,7 @@ const {
   get,
   RSVP
 } = Ember;
-
+/*
 var config = { url: 'ldap://acc.bcbl.local',
   baseDN: 'DC=bcbl,DC=local',
   username: 'ldapnagios@bcbl.local',

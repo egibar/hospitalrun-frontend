@@ -26,7 +26,7 @@ for (let language of allTranslations) {
 
   let syncedTranslation = recursiveSyncTranslation(sortedRootTranslation, nonRootTranslation);
 
-  let fileToWrite = path.join(__dirname, `../../app/locales/${language}/translations.js`)
+  let fileToWrite = path.join(__dirname, `../../app/locales/${language}/translations.js`);
   let contentToWrite = `export default ${stringifyObjectWithoutQuotes(syncedTranslation)};`
   writeToFile(fileToWrite, contentToWrite);
 }

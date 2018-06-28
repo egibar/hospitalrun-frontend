@@ -1052,7 +1052,7 @@ export default {
     } }
   },
   navigation: {
-    about: 'Información de HospitalRun',
+    about: 'Información de NeureClinic',
     actions: {
       login: 'Sartu',
       logout: 'Atera',

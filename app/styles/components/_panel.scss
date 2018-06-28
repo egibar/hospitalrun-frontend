@@ -10,14 +10,14 @@
 
     .btn {
       margin: 10px 0 10px 15px;
-      border: 1px solid $green;
+      border: 1px solid $blue;
       background-color: transparent;
-      color: $green;
+      color: $blue;
       font-size: 14px;
 
       &:hover,
       &:focus {
-        background-color: $green;
+        background-color: $blue;
         color: $white;
       }
     }

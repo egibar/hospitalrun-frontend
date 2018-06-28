@@ -1047,7 +1047,7 @@ export default {
     } }
   },
   navigation: {
-    about: 'Acerca de HospitalRun',
+    about: 'Acerca de NeureClinic',
     actions: {
       login: 'Ingresar',
       logout: 'Salir',
